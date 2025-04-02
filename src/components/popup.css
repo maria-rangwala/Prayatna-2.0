@@ -1,0 +1,95 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  background-image: url('/public/images/scroll-img2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.popup-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 500px;
+}
+.popup-content h1,.popup-content h4,.popup-content p{
+  margin: 0;
+}
+.popup-content h4{
+  font-size: calc(1.275rem + .3vw);
+}
+.popup-content h1{
+  font-size: calc(1.375rem + 1.5vw);
+}
+.popup-btn{
+  margin-top: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  background-color: #4e3929;
+  border: 2px solid #4e3929;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Pirata One';
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  width: 50%;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+.popup-btn:hover , .popup-close:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px #c8a268;
+}
+.popup-btn:hover{
+  color: white;
+}
+
+.popup-close {
+  background: none;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .popup-box {
+  height: 400px;
+  width: 400px;
+  }
+  .popup-btn{
+    padding: 10px 20px;
+    width: 150px;
+    font-size: small;
+  }
+  .popup-content h1{
+    font-size: x-large;
+  }
+  .popup-content h4{
+    font-size: larger;
+  }
+  .popup-content p{
+    font-size: small;
+  }
+}

@@ -1,0 +1,125 @@
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0.9;
+    color: #fff;
+    padding: 0;
+    margin: 0px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    color: #00bcd4;
+  }
+  
+  footer h2 span {
+    color: #00bcd4;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer ul li {
+    display: inline;
+    margin-right: 15px;
+  }
+  .containerF{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-img{
+    display: flex;
+    gap: 20px;
+    height: 90px;
+  }
+  a{
+    color: unset;
+  }
+  .row-wise{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .clg-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 33%;
+  }
+  #img1, #img3{
+    width:90px;
+  }
+  #img2{
+    width:200px;
+  }
+  #acm-logo{
+    width: 200px;
+  }
+  @media (max-width: 800px) {
+    footer {
+        padding: 10px 0;
+    }
+
+    .containerF {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    .row-wise {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clg-logo {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        padding: 15px;
+    }
+
+    .footer-img {
+        gap: 10px;
+        justify-content: center;
+        height: auto; 
+    }
+    footer p {
+        font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .clg-logo {
+        padding: 10px;
+        font-size: 14px; 
+    }
+    footer a {
+        font-size: 14px;
+    }
+    #img1, #img3{
+      width:65px;
+    }
+    #img2{
+      width:125px;
+    }
+    #acm-logo{
+      width: 130px;
+    }
+}
+}

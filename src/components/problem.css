@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+body {
+    font-family: 'Pirata One';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    /* padding: 20px 10px; */
+}
+.slide-main{
+    margin-top: 30px;
+    padding: 15px;
+}
+.slideshow-container {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 4px solid #f59e0b;
+    margin: 20px auto 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s;
+    box-shadow: 0.3s;
+}
+.slideshow-container:hover {
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
+    transform: translateY(-5px);
+}
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+.slide.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.domain-title {
+    font-size: clamp(1.5em, 4vw, 2.5em);
+    margin-bottom: 10px;
+    color: #f59e0b;
+    font-family: 'Pirata One';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 0 10px;
+}
+.domain-description {
+    font-size: clamp(1em, 3vw, 1.5em);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
+    max-width: 800px;
+    line-height: 1.4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 0 10px;
+}
+.problem-statement-container {
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 25px;
+    border-radius: 8px;
+    border: 4px solid #f59e0b;
+    animation: flames 2s infinite;
+    width: 90%;
+    max-width: 400px;
+}
+.problem-statement-container:hover {
+    transform: translateX(-50%) translateY(-5px);
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
+}
+.problem-statement-heading {
+    font-size: clamp(1.5em, 3vw, 2em);
+    margin: 0;
+    color: #f59e0b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    line-height: 1;
+}
+.pdf-button {
+    padding: 8px 16px;
+    background: #f59e0b;
+    color: white;
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    font-size: clamp(1.2em, 2.5vw, 1.5em);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Pirata One';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+}
+.pdf-button:hover {
+    background: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px #f59e0b;
+}
+.navigation {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+.nav-dot {
+    width: clamp(8px, 2vw, 10px);
+    height: clamp(8px, 2vw, 10px);
+    border-radius: 50%;
+    background: rgba(245, 158, 11, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.nav-dot:hover {
+    transform: scale(1.2);
+    background: #f59e0b;
+    box-shadow: 0 0 15px #f59e0b;
+}
+.nav-dot.active {
+    background: #f59e0b;
+    box-shadow: 0 0 10px #f59e0b;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(245, 158, 11, 0.3);
+    color: white;
+    padding: clamp(8px, 1.5vw, 12px) clamp(10px, 2vw, 15px);
+    cursor: pointer;
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: clamp(1em, 2vw, 1.2em);
+    font-family: 'Pirata One';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+.prev { left: 5px; }
+.next { right: 5px; }
+.prev:hover, .next:hover {
+    background: rgba(245, 158, 11, 0.5);
+    box-shadow: 0 0 20px #f59e0b;
+}
+@media screen and (max-width: 768px) {
+    .slideshow-container {
+        min-height: 400px;
+        margin-bottom: 120px;
+    }
+    .logo {
+        width: 150px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .slideshow-container {
+        min-height: 450px;
+        margin-bottom: 30px;
+    }
+    .slideshow-container p{
+        font-size: medium;
+    }
+    .logo {
+        width: 120px;
+    }
+    .prev, .next {
+        padding: 5px 8px;
+        font-size: 0.9em;
+    }
+}

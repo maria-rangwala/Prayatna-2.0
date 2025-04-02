@@ -1,0 +1,289 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.headerr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbarr{
+    background: transparent;
+    opacity: 1;
+    height: 50px;
+    width: 70vw;
+    display:flex;
+    color: #fafafb;
+    padding: 10px;
+    top:0px;
+    justify-content: space-between;
+    align-items: center; 
+    position: absolute;
+    margin-top: 15px;
+    border-radius: 35px;
+    box-shadow: #fbbf24 0px 0px 10px;
+    z-index: 20;
+}
+.navr{
+    display: none;
+}
+.menu{
+    margin-bottom: 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navbarr a{
+height: 40px;
+width: 100px;
+margin: 5px;
+margin-bottom: 15px;
+font-size: 22px;
+color: #f59e0b;
+font-family: 'Pirata One';
+align-items: center;
+font-weight: bold;
+background-color:none;
+text-decoration: none;
+}
+.navbarr a:hover{
+    color: white;
+    cursor: pointer;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    right: 0px;
+}
+.home-heading{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Pirata One';
+    text-align: center;
+    margin-top: 20px;
+}
+.typewriter{
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}  
+.background-image {
+    position: fixed;
+    z-index: -20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url('../assets/image/background-image.jpeg');
+    background-position: center;
+    filter: blur(1px);
+}
+.scroll-image {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('../assets/image/piratecove.jpg');
+    background-position: center;
+    box-shadow: 8px 41px 43px 1px rgba(0, 0, 0, 0.9);
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.home-intro{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 800;
+    color: #fbbf24;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 20px;
+}
+.prayatna-logo{
+    height: 100px;
+    width: 500px;
+    background-image: url('../assets/image/praytna-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.button{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.home-btn{
+    margin-top: 50px;
+    padding: 10px 20px;
+    width: 200px;
+    font-size: 1.5em;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    background-color: #f59e0b;
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    font-size: clamp(1.2em, 2.5vw, 1.5em);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Pirata One';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    width: 50%;
+    text-align: center;
+}
+.home-btn a{
+    text-decoration: none;
+    color: white;
+}
+.home-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px #f59e0b;
+    background: transparent;
+}
+.blur-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(100px); 
+    z-index: -1;
+}
+@media (min-width: 800px) {
+    .navr{
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    .navr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+    }
+    .navbarr {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 0px;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbarr.responsive .menu {
+        display: flex;
+    }
+    .navbarr.responsive ul {
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        padding-left: 0px;
+    }
+    .navbarr.responsive ul li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+    .navr-logo {
+        height: 60px;
+        width: 200px;
+        background-image: url('/public/images/Prayatna.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .navr button {
+        margin: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .background-image {
+        background-image: url('../assets/image/background-image-max600.jpeg');
+    }
+    .navbarr.responsive{
+        margin-top: 0px;
+        box-shadow: none;
+        height: 410px;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .navr button{
+        margin: 20px;
+        right: 0px;
+        align-items: center;;
+    }
+    .navr-logo{
+        height: 60px;
+        width: 200px;
+        background-image: url('/public/images/Prayatna.png');
+    }
+    .scroll-image{
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .prayatna-logo{
+        height: 70px;
+        width: 300px;
+    }
+    .home-heading{
+        font-size: 50px;
+    }
+    .typewriter{
+        font-size: 17px;
+    }  
+    .button{
+        gap: 15px;
+    }
+    .home-btn{
+        margin-top: 15px;
+        padding: 10px 20px;
+        width: 100px;
+        font-size: 1.5em;
+        font-weight: 700;
+        cursor: pointer;
+        color: white;
+        background-color: #f59e0b;
+        border: 2px solid #f59e0b;
+        border-radius: 8px;
+        font-size: clamp(1.2em, 2.5vw, 1.5em);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: 'Pirata One';
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        width: 50%;
+        text-align: center;
+        }    
+}

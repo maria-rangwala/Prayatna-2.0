@@ -1,0 +1,34 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0px;
+  padding: 0px;
+ }
+ .body{
+  left: 0;
+  right: 0;
+  top: 0;
+   font-family: 'IM Fell English', serif;
+   background: linear-gradient(to bottom, #1e293b, #1c1f26);
+   color: #fff;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-image: url('./assets/image/background-image.jpeg'), linear-gradient(to bottom, #1e293b, #1c1f26);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   text-align: center;
+   overflow-x: hidden;
+ }
+
+ @media (max-width: 800px) {
+  .body{
+      background-image: url('./assets/image/background-image-max600.jpeg');
+  }
+}

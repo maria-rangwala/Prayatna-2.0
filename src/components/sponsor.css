@@ -1,0 +1,83 @@
+.title-sponsor{
+    left: 25%;
+    position: relative;
+    padding: 2rem;
+    border: 4px solid #f59e0b;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.title-sponsor:hover {
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
+    transform: translateY(-5px);
+}
+.solo-img{
+    width : 250px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.solo-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #b18ffc;
+}
+.sreeyam-img{
+    width : 300px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.sreeyam-img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 25px #faa61a;
+}
+.marktine-img{
+    width : 300px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.marktine-img:hover {
+    transform: scale(1.1); 
+}
+.unstop-img{
+    width : 200px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.unstop-img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 25px #1e4a7e;
+}
+.splide__track{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    height: 200px;
+}
+.splide__slide img{
+    width: 200px;
+    object-fit: contain;
+}
+.splide__slide img:hover{
+    transform: scale(1.05);
+}
+@media screen and (max-width: 480px) {
+    .title-sponsor{
+        width: 90%;
+        left: 5%;
+    }
+}
