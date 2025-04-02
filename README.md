@@ -1,5 +1,5 @@
 # Prayatna 2.0
-🚀🌟 Prayatna se sabkuch mumkin hai! 🌟🚀
+🌟 Prayatna se sabkuch mumkin hai! 🌟
 
 **🚀 Live Website:** [Prayatna 2.0](https://aitr.acm.org/prayatna2/)
 
